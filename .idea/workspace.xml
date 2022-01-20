@@ -10,7 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e894509a-0fd2-4dc6-9058-1fcf98c7e4c4" name="Default Changelist" comment="" />
+    <list default="true" id="e894509a-0fd2-4dc6-9058-1fcf98c7e4c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,12 +161,13 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/database" />
     </key>
   </component>
   <component name="RunManager">
@@ -197,6 +200,7 @@
       <workItem from="1642322674384" duration="10362000" />
       <workItem from="1642584210226" duration="17251000" />
       <workItem from="1642602670831" duration="1180000" />
+      <workItem from="1642683641515" duration="350000" />
     </task>
     <servers />
   </component>

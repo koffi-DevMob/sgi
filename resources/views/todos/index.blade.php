@@ -45,7 +45,7 @@
                                 @if($data->todoAffectedTo && $data->todoAffectedTo->id == Auth::user()->id)
                                 affectée à moi
                                 @elseif ($data->todoAffectedTo)
-                            {{$data->todoAffectedTo ? 'Affectée a' .$data->AffectedTo->name : ''}}
+                            {{$data->todoAffectedTo ? 'Affectée a' .$data->todoAffectedTo->name : ''}}
                                 @endif
                             {{--Display affected by someone or by user himself--}}
                             @if($data->todoAffectedTo && $data->todoAffectedBy && $data->todoAffectedBy->id == Auth::user()->id)
@@ -80,7 +80,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @foreach ($users as $user)
-                                <a href="../public/todos/{{$data->id}}/affectedTo/{{$user->id}}" class="dropdown-item">{{$user->name}}</a>
+                                <a href="{{route("todos.affectedto",[$data->id,$user->id])}}" class="dropdown-item">{{$user->name}}</a>
                             @endforeach
                         </div>
                     </div>

@@ -29,4 +29,9 @@ class TodoPolicy
     {
         return $user->id === $todo->creator_id;
     }
+
+    public function done(User $user, Todo $todo)
+    {
+        return $user->id === $todo->creator_id;
+    }
 }

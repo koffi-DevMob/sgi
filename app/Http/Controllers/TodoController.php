@@ -19,10 +19,9 @@ class TodoController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->users = User::getAllUsers();
     }
 
-    /**
+    /**s
     * Assign a todo to an user
      *
      *  @param App\Todo $todo
@@ -52,7 +51,8 @@ class TodoController extends Controller
         /*$datas  = Todo::all() ->reject(function ($todo){
             return $todo -> done == 0;
         });*/
-        $users = $this->users;
+         $users = User::where('id','!=',Auth::user()->id)->get();
+         //sdd($users);
         return view('todos.index', compact('datas','users'));
 
     }
@@ -62,8 +62,9 @@ class TodoController extends Controller
      * */
     Public function done()
     {
-        $datas = Todo::where('done',1) -> paginate(8);
-        $users = $this->users;
+        $datas = Todo::where('done',1) ->orderBy('id','desc')-> paginate(8);
+        $users = User::where('id','!=',Auth::user()->id)->get();
+
         return view('todos.index', compact('datas','users'));
     }
 
@@ -72,8 +73,8 @@ class TodoController extends Controller
      * */
     Public function undone()
     {
-        $datas = Todo::where('done',0) -> paginate(8);
-        $users = $this->users;
+        $datas = Todo::where('done',0)->orderBy('id','desc')-> paginate(8);
+        $users = User::where('id','!=',Auth::user()->id)->get();
         return view('todos.index', compact('datas','users'));
     }
 
